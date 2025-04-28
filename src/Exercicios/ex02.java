@@ -49,7 +49,7 @@ public class ex02 {
 		System.out.println("Nome: " + nome);
 		System.out.printf("Salário por hora %.2f%n", salH);*/
 		
-		System.out.println("Digite o codigo da peça 1: ");
+		/*System.out.println("Digite o codigo da peça 1: ");
 		int codigo1 = sc.nextInt();
 		System.out.println("Digite o numero de peças do codigo ' " + codigo1 + " ':");
 		int quant1 = sc.nextInt();
@@ -66,7 +66,7 @@ public class ex02 {
 		double tot2 = vu2 * quant2;
 		
 		double total = tot1 + tot2;
-		System.out.printf("Valor a pagar: R$ %.2f%n", total);
+		System.out.printf("Valor a pagar: R$ %.2f%n", total);*/
 		
 		/*double a, b, c;
 		a = sc.nextDouble();
