@@ -30,14 +30,14 @@ public class FuncoesMat {
 		System.out.println("Valor absolute de " + y + " = " + a);
 		System.out.println("Valor absolute de " + z + " = " + b);*/
 		
-		b = 5;
+		/*b = 5;
 		a = -2;
 		c = 3;
 		double delta = Math.pow(b, 2) - 4 * a * c;
 		double x1 = (-b + Math.sqrt(delta)) / (2 * a);
 		double x2 = (-b - Math.sqrt(delta)) / (2 * a);
 		System.out.println(x1);
-		System.out.println(x2);
+		System.out.println(x2);*/
 	}
 
 }
