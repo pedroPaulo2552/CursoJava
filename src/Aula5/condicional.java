@@ -37,7 +37,7 @@ public class condicional {
 		
 		System.out.printf("Valor a pagar:R$%.2f%n", conta);*/
 		
-		int num = sc.nextInt();
+		/*int num = sc.nextInt();
 		switch (num) {
 		case 1:
 			System.out.println("Dia da semana: Domingo");
@@ -70,7 +70,11 @@ public class condicional {
 		default:
 			System.out.println("Número Invalido");
 			break;
-		}
+		}*/
+		
+		double preco = 34.5;
+		double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+		System.out.println(desconto);
 		
 		sc.close();
 		
