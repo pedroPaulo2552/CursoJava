@@ -28,16 +28,53 @@ public class condicional {
 				System.out.println("Boa noite!");
 			}*/
 		
-		System.out.println("Por quantos minutos você utilizou o telefone?");
+		/*System.out.println("Por quantos minutos você utilizou o telefone?");
 		int minutos = sc.nextInt();
 		double conta = 50.00;
 		if (minutos > 100) {
 			conta += (minutos - 100) * 2.00;
 		}
 		
-		System.out.printf("Valor a pagar:R$%.2f%n", conta);
+		System.out.printf("Valor a pagar:R$%.2f%n", conta);*/
+		
+		int num = sc.nextInt();
+		switch (num) {
+		case 1:
+			System.out.println("Dia da semana: Domingo");
+			break;
+			
+		case 2:
+			System.out.println("Dia da semana: Segunda");
+			break;
+			
+		case 3:
+			System.out.println("Dia da semana: Terça");
+			break;
+			
+		case 4:
+			System.out.println("Dia da semana: Quarta");
+			break;
+			
+		case 5:
+			System.out.println("Dia da semana: Quinta");
+			break;
+			
+		case 6:
+			System.out.println("Dia da semana: Sexta");
+			break;
+			
+		case 7:
+			System.out.println("Dia da semana: Sabado");
+			break;
+			
+		default:
+			System.out.println("Número Invalido");
+			break;
+		}
 		
 		sc.close();
+		
+		
 
 	}
 
