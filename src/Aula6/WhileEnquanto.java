@@ -6,13 +6,17 @@ public class WhileEnquanto {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int num = 1;
+		int num = sc.nextInt();
 		int cont = 0;
 		while (num != 0) {
+			cont += num;
 			num = sc.nextInt();
-			if (num != 0) {cont += num;}
 		}
 		System.out.println("A soma dos números foi " + cont);
+		
+		
+		
+		sc.close();
 	}
 
 }
