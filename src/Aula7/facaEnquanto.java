@@ -11,11 +11,11 @@ public class facaEnquanto {
 		char res;
 		double temp;
 		do {
-			System.out.print("Digite a temperatura em Celsius:");
+			System.out.print("Digite a temperatura em Celsius: ");
 			temp = sc.nextDouble();
 			double fah = (9 * temp) / 5 + 32;
 			System.out.printf("Equivalente em Fahrenheit: %.1f%n", fah);
-			System.out.print("Deseja repetir (s/n)?");
+			System.out.print("Deseja repetir (s/n)? ");
 			res = sc.next().charAt(0);
 		} while (res == 's');
 		
