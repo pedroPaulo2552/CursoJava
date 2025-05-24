@@ -52,18 +52,35 @@ public class ex05 {
 				System.out.println(div);
 			}
 		}*/
-		int n = sc.nextInt();
-		int fat = 0;
-		if (n == 0) {
-			fat = 1;
+		
+		/*int n = sc.nextInt();
+		if (n == 0 || n == 1) {
+			int fat = 1;
+			System.out.println(fat);
 		} else {
-			fat = n * (n - 1);
-			for (int c = n - 2; c > 1; c--) {
-				fat *= c;
+			for (int c = n; c > 1; c--) {
+				if (c - 1 > 0) {
+					n = n * (c - 1);
+				}
 			}
+			System.out.println(n);
+		}*/
+		
+		/*int n = sc.nextInt();
+		for (int c = n; c > 0; c--) {
+			if (n % c == 0) {
+				System.out.println(c);
+			}
+		}*/
+		
+		int n = sc.nextInt();
+		double quad = 1;
+		double cubo = 1;
+		for (int c = 1; c <= n; c++) {
+			quad = Math.pow(c, 2);
+			cubo = Math.pow(c, 3);
+			System.out.printf("%d %.0f %.0f%n", c, quad, cubo);
 		}
-
-		System.out.println(fat);
 		
 		sc.close();
 	}
