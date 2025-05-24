@@ -73,14 +73,14 @@ public class ex05 {
 			}
 		}*/
 		
-		int n = sc.nextInt();
+		/*int n = sc.nextInt();
 		double quad = 1;
 		double cubo = 1;
 		for (int c = 1; c <= n; c++) {
 			quad = Math.pow(c, 2);
 			cubo = Math.pow(c, 3);
 			System.out.printf("%d %.0f %.0f%n", c, quad, cubo);
-		}
+		}*/
 		
 		sc.close();
 	}
