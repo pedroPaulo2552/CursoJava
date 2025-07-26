@@ -11,11 +11,11 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
 		Product produto1 = new Product();
-		System.out.println("Nome do produto:");
+		System.out.print("Nome do produto: ");
 		produto1.Name = sc.nextLine();
-		System.out.println("Preço do produto:");
+		System.out.print("Preço do produto: ");
 		produto1.Price = sc.nextDouble();
-		System.out.println("Quantidade em estoque:");
+		System.out.print("Quantidade em estoque: ");
 		produto1.Quant = sc.nextInt();
 		produto1.ShowProduct();
 		System.out.println("---------------------------------------------------");
@@ -27,20 +27,21 @@ public class Program {
 			res = sc.nextInt();
 			switch (res) {
 				case 1:
-					System.out.println("Digite a quantidade de Entrada");
+					System.out.print("Digite a quantidade de Entrada: ");
 					int ent = sc.nextInt();
 					produto1.Entrada(ent);
+					System.out.println(produto1.ShowProduct());
 					produto1.ShowProduct();
 					break;
 				
 				case 2:
-					System.out.println("Digite a quantidade de Saída");
+					System.out.print("Digite a quantidade de Saída: ");
 					int sai = sc.nextInt();
 					produto1.Saida(sai);
-					produto1.ShowProduct();
+					System.out.println(produto1.ShowProduct());
 					break;
 			};
-			System.out.println("Quer continuar? s/n");
+			System.out.print("Quer continuar? s/n: ");
 			res2 = sc.next();
 		} while (res2.equals("s"));
 		

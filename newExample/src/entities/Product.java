@@ -21,8 +21,7 @@ public class Product {
 		return Quant * Price;
 	}
 	
-	public void ShowProduct() {
-		double total = total();
-		System.out.println("Info do produto: " + Name + ", $ " + Price + ", " + Quant + " units, Total: $ " + total);
+	public String ShowProduct() {
+		return "Info do produto: " + Name + ", $ " + String.format("%.2f", Price) + ", " + Quant + " units, Total: $ " + String.format("%.2f", total());
 	}
 }
