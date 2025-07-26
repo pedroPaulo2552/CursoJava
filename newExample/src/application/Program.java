@@ -40,7 +40,7 @@ public class Program {
 					produto1.ShowProduct();
 					break;
 			};
-			System.out.println("Quer continuar? sim/nao");
+			System.out.println("Quer continuar? s/n");
 			res2 = sc.next();
 		} while (res2.equals("s"));
 		

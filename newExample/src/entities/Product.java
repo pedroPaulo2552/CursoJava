@@ -10,12 +10,19 @@ public class Product {
 	}
 	
 	public void Saida(int y) {
-		Quant = Quant - y;
+		if (y < Quant) {
+			Quant = Quant - y;
+		} else {
+			Quant = 0;
+		}
+	}
+	
+	public double total() {
+		return Quant * Price;
 	}
 	
 	public void ShowProduct() {
-		System.out.println("Nome do produto: " + Name);
-		System.out.println("Preço do produto: " + Price);
-		System.out.println("Quantidade em estoque: " + Quant);
+		double total = total();
+		System.out.println("Info do produto: " + Name + ", $ " + Price + ", " + Quant + " units, Total: $ " + total);
 	}
 }
