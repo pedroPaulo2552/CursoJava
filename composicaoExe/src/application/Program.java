@@ -52,17 +52,45 @@ public class Program {
 		}
 		sc.nextLine();
 		System.out.println();
+		char res2 = 's';
+		do {
+			System.out.println("[1] To calculate income");
+			System.out.println("[2] To remove contract");
+			int res1 = sc.nextInt();
+			switch (res1) {
+			case 1:
+				sc.nextLine();
+				System.out.print("Enter month and year to calculate income (MM/YYYY): ");
+				String mesAnoString = sc.nextLine();
+				int ano = Integer.parseInt(mesAnoString.substring(3, 7));
+				int mes = Integer.parseInt(mesAnoString.substring(0, 2));
+				
+				System.out.println("Name: " + worker1.getName());
+				System.out.println("Department: " + depart.getName());
+				System.out.println("Income for " + mesAnoString + ": " + String.format("%.2f", worker1.income(ano, mes)));
+				break;
+				
+			case 2:
+				sc.nextLine();
+				System.out.print("Date of contract (DD/MM/YYYY): ");
+				String dateString = sc.nextLine();
+				LocalDate date = LocalDate.parse(dateString, fmt1);
+				System.out.print("Value per hour: ");
+				Double valuePerHour = sc.nextDouble();
+				System.out.print("Duration (Hours): ");
+				Integer hours = sc.nextInt();
+				HourContract contract = new HourContract(date, valuePerHour, hours);
+				worker1.removeContract(contract);
+				break;
+			}
+			
+			System.out.print("Do you want to continue (s/n)? ");
+			res2 = sc.next().charAt(0);
+		} while (res2 == 's');
 		
-		System.out.print("Enter month and year to calculate income (MM/YYYY): ");
-		String mesAnoString = sc.nextLine();
-		int ano = Integer.parseInt(mesAnoString.substring(3, 7));
-		int mes = Integer.parseInt(mesAnoString.substring(0, 2));
-		
-		System.out.println("Name: " + worker1.getName());
-		System.out.println("Department: " + depart.getName());
-		System.out.println("Income for " + mesAnoString + ": " + worker1.income(ano, mes));
-		
-		
+		System.out.println("=========================================================");
+		System.out.println("                   COMEBACK ANYTIME                      ");
+		System.out.println("=========================================================");
 		
 		sc.close();
 

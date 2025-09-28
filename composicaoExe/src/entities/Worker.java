@@ -58,20 +58,38 @@ public class Worker {
 	}
 	
 	public void removeContract(HourContract contract) {
-		this.contracts.remove(contract);
+		for (int i = 0; i < this.contracts.size(); i++) {
+			if(contract.getDate().getDayOfMonth() == this.contracts.get(i).getDate().getDayOfMonth()) {
+				if (contract.getDate().getMonthValue() == this.contracts.get(i).getDate().getMonthValue()) {
+					if (contract.getDate().getYear() == this.contracts.get(i).getDate().getYear()) {
+						this.contracts.remove(i);
+					}
+				}
+			}
+		}
+		System.out.println("Contracts: ");
+		for (HourContract in : contracts) {
+			System.out.println("Contract " + contracts.indexOf(in) + ", Data: " + in.getDate() + ", Value per hour: " + in.getValuePerHour() + ", Duration: " + in.getHours());
+		}
 	}
 	
 	
 	public double income(int year, int month) {
+		double totalContract = 0;
 		for (int i = 0; i < this.contracts.size(); i++) {
 			int ano = this.contracts.get(i).getDate().getYear();
-			int mes = this.contracts.get(i).getDate().getMonthValue() + 1;
+			int mes = this.contracts.get(i).getDate().getMonthValue();
 			if (ano == year && mes == month) {
-				double totalContract =  this.contracts.get(i).totalValue();
-				return totalContract + this.baseSalary;
+				totalContract +=  this.contracts.get(i).totalValue();
 			}
 		}
-		return 0;
+		if (totalContract == 0) {
+			return 0;
+		} else {
+			totalContract += this.baseSalary;
+			return totalContract;
+		}
+		
 	}
 	
 	
